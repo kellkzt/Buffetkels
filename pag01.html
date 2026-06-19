@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Orçamento Buffet</title>
+   <link rel="stylesheet" href="stylebuffet.css">
+</head>
+
+<body>
+<div class="buffet">
+
+    <h1>Request a Quote</h1>
+
+    <!-- INPUT -->
+    <input type="number" id="convidados" placeholder="Number of guests">
+
+    <!-- BOTÃO -->
+    <button onclick="calcular()">Calculate</button>
+
+    <!-- RESULTADO -->
+    <div id="resultado"></div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function calcular() {
+            let convidados = Number(document.getElementById("convidados").value);
+            let resultado = document.getElementById("resultado");
+
+            if (convidados < 50) {
+                resultado.innerHTML = "Number of guests is insufficient to contract the buffet.";
+            } else {
+
+                let carne = convidados * 300;
+                let carnekg = carne / 1000;
+                let refrigerante = (convidados * 3) + 9;
+                let doces = convidados * 1;
+
+                let classificacao;
+
+                if (convidados <= 100) {
+                    classificacao = "Evento pequeno";
+                } else if (convidados <= 200) {
+                    classificacao = "Evento médio";
+                } else {
+                    classificacao = "Evento grande";
+                }
+
+                resultado.innerHTML = `
+                    <p>Carne: ${carnekg} kg</p>
+                    <p>Refrigerantes: ${refrigerante} latas</p>
+                    <p>Doces: ${doces}</p>
+                    <p>Classificação: ${classificacao}</p>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>

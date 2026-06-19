@@ -1,0 +1,68 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO PADRÃO DO SITE */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e4d2c5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* TÍTULO */
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    font-weight: 400;
+    color: #3e3429;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* INPUT */
+input {
+    width: 280px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+/* BOTÃO */
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #eed6bb;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* RESULTADO */
+#resultado {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 25px;
+    font-size: 18px;
+    text-align: center;
+    color: #3e3429;
+    max-width: 400px;
+    line-height: 1.6;
+}
